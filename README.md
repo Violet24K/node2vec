@@ -1,2 +1,2 @@
 # node2vec
-node2vec for python 3
+node2vec in Python 3
