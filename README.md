@@ -1,10 +1,7 @@
 # node2vec
 
-This repository provides a reference implementation of *node2vec* as described in the paper:<br>
-> node2vec: Scalable Feature Learning for Networks.<br>
-> Aditya Grover and Jure Leskovec.<br>
-> Knowledge Discovery and Data Mining, 2016.<br>
-> <Insert paper link>
+This is a reimplementation of node2vec algorithm in Python3 (original implementation is in Python2). Original repo: https://github.com/aditya-grover/node2vec
+
 
 The *node2vec* algorithm learns continuous representations for nodes in any (un)directed, (un)weighted graph. Please check the [project page](https://snap.stanford.edu/node2vec/) for more details. 
 
@@ -14,7 +11,8 @@ The *node2vec* algorithm learns continuous representations for nodes in any (un)
 To run *node2vec* on Zachary's karate club network, execute the following command from the project home directory:<br/>
 	``python src/main.py --input graph/karate.edgelist --output emb/karate.emd``
 
-``python src/main.py --input 'graph/generate_embedding_wikilens.txt' --output 'emb/wikilens.txt' --weighted --dimensions 300``
+A weighted example with manually assigned dimension:<br/>
+	``python src/main.py --input 'graph/generate_embedding_wikilens.txt' --output 'emb/wikilens.txt' --weighted --dimensions 300``
 
 #### Options
 You can check out the other options available to use with *node2vec* using:<br/>
@@ -50,8 +48,3 @@ If you find *node2vec* useful for your research, please consider citing the foll
 	}
 
 
-### Miscellaneous
-
-Please send any questions you might have about the code and/or the algorithm to <adityag@cs.stanford.edu>.
-
-*Note:* This is only a reference implementation of the *node2vec* algorithm and could benefit from several performance enhancement schemes, some of which are discussed in the paper.
